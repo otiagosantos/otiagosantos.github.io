@@ -1,53 +1,58 @@
 let navRadios = document.querySelectorAll('input[name="nav"]')
 
 function onRadioChange (element) {
-    // let element = event.target
-
     document.querySelectorAll('.main-content').forEach(mainContent => {
         mainContent.hidden = true
-        // mainContent.style.opacity = '0'
     })
 
     document.querySelector(`.main-content__${element.id}`).hidden = !element.checked;
-    // document.querySelector(`.main-content__${element.id}`).style.opacity = '100'
 
-    main()
+    setSelectorPosition()
 }
 
-navRadios.forEach(navRadio => {
-    navRadio.addEventListener('change', () => onRadioChange(navRadio))
-})
+function ElementParameters (element) {
+    this.element = element
+    this.positionOnScreen = {
+        x: element.getBoundingClientRect().left,
+        y: element.getBoundingClientRect().top
+    }
+    this.centerOfElement = {
+        x: element.getBoundingClientRect().width / 2,
+        y: element.getBoundingClientRect().height / 2
+    }
+}
 
-function main() {
-    let checkedInput = document.querySelector('input[name="nav"]:checked + label')
+let checkedInput = {}
+let selector = {}
 
-    let selectorEl = document.querySelector('.selector');
+function setSelectorPosition() {
+    checkedInput = new ElementParameters(
+        document.querySelector('input[name="nav"]:checked + label')
+    )
 
-    let centerCheckedPositionX
-        = checkedInput.getBoundingClientRect().left
-        + checkedInput.getBoundingClientRect().width / 2
+    selector = new ElementParameters(
+        document.querySelector('.selector')
+    )
 
-    let centerCheckedPositionY
-        = checkedInput.getBoundingClientRect().top
-        + checkedInput.getBoundingClientRect().height / 2
+    let checkedInputXPostiionCenterOnScreen
+        = checkedInput.positionOnScreen.x
+        + checkedInput.centerOfElement.x
 
-    let centerSelectorX
-        = selectorEl.getBoundingClientRect().width / 2
-    
-    let centerSelectorY
-        = selectorEl.getBoundingClientRect().height / 2
+    let checkedInputYPostiionCenterOnScreen
+        = checkedInput.positionOnScreen.y
+        + checkedInput.centerOfElement.y
 
     let toXPosition
-        = centerCheckedPositionX - centerSelectorX
+        = checkedInputXPostiionCenterOnScreen - selector.centerOfElement.x
 
     let toYPosition
-        = centerCheckedPositionY + centerSelectorY
+        = checkedInputYPostiionCenterOnScreen + selector.centerOfElement.y
 
     // animation
     const selectorAnimation = [
-        { left: `${selectorEl.getBoundingClientRect().left}px` },
+        { left: `${selector.positionOnScreen.x}px` },
         { left: `${toXPosition}px`},
-        { top: `${selectorEl.getBoundingClientRect().top}px` },
+        { top: `${selector.positionOnScreen.y}px` },
         { top: `${toYPosition}px` }
     ]
 
@@ -56,15 +61,19 @@ function main() {
         iterations: 1
     }
 
-    
     setTimeout(() => {
-        selectorEl.animate(selectorAnimation, selectorAnimationTiming);
+        selector.element.animate(selectorAnimation, selectorAnimationTiming);
 
 
-        selectorEl.style.left = `${toXPosition}px`
-        selectorEl.style.top = `${toYPosition}px`
+        selector.element.style.left = `${toXPosition}px`
+        selector.element.style.top = `${toYPosition}px`
     }, 150)
 }
 
+navRadios.forEach(navRadio => {
+    navRadio.addEventListener('change', () => onRadioChange(navRadio))
+})
+
 onRadioChange(document.querySelector('input[name="nav"]:checked'))
-main()
+
+setSelectorPosition()
