@@ -1,0 +1,63 @@
+.page__container {
+    
+}
+
+/* 
+colors:
+primary: #0000FF70;
+primary: #500070;
+secondary: #FF553370
+*/
+
+.circle {
+    height: 50vh;
+    width: 50vh;
+    background-color: #FF553370;
+    border-left: #0000FF70 100px solid;
+    border-bottom: #0000FF70 100px solid;
+    border-radius: 50%;
+    filter: drop-shadow(50px -50px 10px #FF5533A0)
+        drop-shadow(-50px 50px 10px #0000FFA0);
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+
+    z-index: 0;
+
+    animation-name: circle;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@media(max-width: 768px) {
+    .circle {
+        height: 50vw;
+        width: 50vw;
+    }
+}
+
+.bg-1 {
+    background-color: #00000060;
+    backdrop-filter: blur(100px);
+
+    position: absolute;
+    z-index: 1;
+}
+
+@keyframes circle {
+    from {
+        transform: rotate(0deg);
+        filter: drop-shadow(50px -50px 10px #FF5533A0)
+        drop-shadow(-50px 50px 10px #0000FFA0);
+    }
+    to {
+        transform: rotate(360deg);
+        filter: drop-shadow(-50px 50px 10px #FF5533A0)
+        drop-shadow(50px -50px 10px #0000FFA0);
+    }
+}

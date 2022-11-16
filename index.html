@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/navInputs.css">
+    <link rel="stylesheet" href="./styles/bgAnimation.css">
+
+    <title>Tiago Santos</title>
+
+    <script src="./scripts/index.js" defer></script>
+    <!-- <script src="./scripts/navInputs.js" defer></script> -->
+</head>
+<body>
+    
+    <!-- Page Container -->
+    <div class="page__container">
+        <!-- Background animado 1 -->
+        <div class="circle"></div>
+        <div class="bg-1">
+            <!-- header + navbar -->
+            <header class="header">
+                <div class="selector"></div>
+                <nav class="header__nav">
+                    <input type="radio" name="nav" id="home" checked>
+                    <label for="home">Tiago Santos</label>
+
+                    <input type="radio" name="nav" id="sobre">
+                    <label for="sobre">Sobre</label>
+
+                    <input type="radio" name="nav" id="techs">
+                    <label for="techs">Techs</label>
+
+                    <input type="radio" name="nav" id="conhecimentos">
+                    <label for="conhecimentos">Conhecimentos</label>
+
+                    <input type="radio" name="nav" id="projetos">
+                    <label for="projetos">Projetos</label>
+
+                    <input type="radio" name="nav" id="contato">
+                    <label for="contato">Contato</label>
+                </nav>
+            </header>
+
+            <!-- main content container -->
+            <div class="main-content__container">
+                <!-- main content | Me | Sobre | Techs | Conhecinmentos | Projetos | Contato -->
+                <div class="main-content main-content__home border-boxed">
+                    <div class="flex">
+                        <h1>TIAGO GONÇALVES DOS SANTOS</h1>
+                        <h2>Programador Full Stack</h2>
+                        <h2>NodeJS, ReactJS, Typescript, +</h2>
+                    </div>
+                </div>
+
+                <div class="main-content main-content__sobre" hidden>
+                    <div class="flex">
+                        <h2 class="border-boxed">Sobre</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt provident voluptates veniam alias quidem nisi quisquam obcaecati, ut fuga minima voluptas praesentium quod reiciendis ad consequatur culpa et sequi quia!</p>
+                    </div>
+                </div>
+
+                <div class="main-content main-content__techs" hidden>
+                    <div class="flex">
+                        <h2 class="border-boxed">Techs</h2>
+                    </div>
+                </div>
+
+                <div class="main-content main-content__conhecimentos" hidden>
+                    <div class="flex">
+                        <h2 class="border-boxed">Conhecimentos</h2>
+                    </div>
+                </div>
+
+                <div class="main-content main-content__projetos" hidden>
+                    <div class="flex">
+                        <h2 class="border-boxed">Projetos</h2>
+                    </div>
+                </div>
+
+                <div class="main-content main-content__contato" hidden>
+                    <div class="flex">
+                        <h2 class="border-boxed">Contato</h2>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
