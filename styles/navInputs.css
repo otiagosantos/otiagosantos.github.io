@@ -9,6 +9,11 @@ input[name="nav"]:checked + label {
     padding-bottom: 5px;
 }
 
+.header__nav {
+    display: flex;
+    justify-content: center;
+}
+
 .header__nav label{
     cursor: pointer;
     margin: 0 10px;
@@ -28,7 +33,7 @@ input[name="nav"]:checked + label {
     filter: drop-shadow(10px -10px 6px #FF553390)
         drop-shadow(-10px 10px 6px #0000FF90);
 
-    position: absolute;
+    position: fixed;
     left: 50vw;
     right: 0;
     top: 80vh;
