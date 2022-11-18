@@ -28,11 +28,9 @@ input[name="nav"]:checked + label {
     height: 1rem;
     width: 1rem;
     background-color: #FFF;
-    /* border-left: #0000FF 5px solid;
-    border-bottom: #0000FF 5px solid; */
     border-radius: 50%;
-    filter: drop-shadow(10px -10px 6px #FF553390)
-        drop-shadow(-10px 10px 6px #0000FF90);
+    filter: drop-shadow(5px -5px 4px #FF5533A0)
+        drop-shadow(-5px 5px 4px #5500FFA0);
 
     position: fixed;
     left: 50vw;
@@ -53,22 +51,22 @@ input[name="nav"]:checked + label {
 @keyframes selector {
     0% {
         transform: rotate(0deg);
-        filter: drop-shadow(10px -10px 6px #FF553390)
-        drop-shadow(-10px 10px 6px #0000FF90);
+        filter: drop-shadow(5px -5px 4px #FF5533A0)
+        drop-shadow(-5px 5px 4px #5500FFA0);
     }
     25% {
         transform: rotate(180deg);
-        filter: drop-shadow(-10px 10px 6px #FF553390)
-        drop-shadow(10px -10px 6px #0000FF90);
+        filter: drop-shadow(-5px 5px 4px #FF5533A0)
+        drop-shadow(5px -5px 4px #5500FFA0);
     }
     50% {
         transform: rotate(270deg);
-        filter: drop-shadow(-10px 10px 6px #FF553390)
-        drop-shadow(10px -10px 6px #0000FF90);
+        filter: drop-shadow(-5px 5px 4px #FF5533A0)
+        drop-shadow(5px -5px 4px #5500FFA0);
     }
     100% {
         transform: rotate(360deg);
-        filter: drop-shadow(10px -10px 6px #FF553390)
-        drop-shadow(-10px 10px 6px #0000FF90);
+        filter: drop-shadow(5px -5px 4px #FF5533A0)
+        drop-shadow(-5px 5px 4px #5500FFA0);
     }
 }

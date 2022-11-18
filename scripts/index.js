@@ -43,7 +43,7 @@ function setSelectorPosition() {
         + checkedInput.centerOfElement.y
 
     let toXPosition
-        = checkedInputXPostiionCenterOnScreen - selector.centerOfElement.x
+        = checkedInputXPostiionCenterOnScreen // - selector.centerOfElement.x
 
     let toYPosition
         = checkedInputYPostiionCenterOnScreen + selector.centerOfElement.y

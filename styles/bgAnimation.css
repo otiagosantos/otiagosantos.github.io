@@ -1,7 +1,7 @@
 /* 
 colors:
 primary: #0000FF70;
-primary: #500070;
+primary: #5500FFA0;
 secondary: #FF553370
 */
 
@@ -9,11 +9,11 @@ secondary: #FF553370
     height: 50vh;
     width: 50vh;
     background-color: #FF553370;
-    border-left: #0000FF70 100px solid;
-    border-bottom: #0000FF70 100px solid;
+    border-left: #5500FFA0 100px solid;
+    border-bottom: #5500FFA0 100px solid;
     border-radius: 50%;
     filter: drop-shadow(50px -50px 10px #FF5533A0)
-        drop-shadow(-50px 50px 10px #0000FFA0);
+        drop-shadow(-50px 50px 10px #5500FFA0);
 
     position: fixed;
     left: 0;
@@ -25,7 +25,7 @@ secondary: #FF553370
     z-index: -2;
 
     animation-name: circle;
-    animation-duration: 4s;
+    animation-duration: 6s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
@@ -55,12 +55,12 @@ secondary: #FF553370
 @keyframes circle {
     from {
         transform: rotate(0deg);
-        filter: drop-shadow(50px -50px 10px #FF5533A0)
-        drop-shadow(-50px 50px 10px #0000FFA0);
+        filter: drop-shadow(100px -100px 50px #FF5533A0)
+        drop-shadow(-100px 100px 50px #5500FFA0);
     }
     to {
         transform: rotate(360deg);
-        filter: drop-shadow(-50px 50px 10px #FF5533A0)
-        drop-shadow(50px -50px 10px #0000FFA0);
+        filter: drop-shadow(-100px 100px 50px #FF5533A0)
+        drop-shadow(100px -100px 50px #5500FFA0);
     }
 }
