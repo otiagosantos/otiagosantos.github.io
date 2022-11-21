@@ -31,10 +31,10 @@
                 <label for="sobre">Sobre</label>
 
                 <input type="radio" name="nav" id="techs">
-                <label for="techs">Techs</label>
+                <label for="techs">Conhecimentos</label>
 
-                <input type="radio" name="nav" id="conhecimentos">
-                <label for="conhecimentos">Conhecimentos</label>
+                <!-- <input type="radio" name="nav" id="conhecimentos">
+                <label for="conhecimentos">Conhecimentos</label> -->
 
                 <input type="radio" name="nav" id="projetos">
                 <label for="projetos">Projetos</label>
@@ -70,18 +70,24 @@
 
             <div class="main-content main-content__techs" hidden>
                 <div class="flex">
-                    <h2 class="h2 border-boxed">Principais Tecnologias</h2>
+                    <h2 class="h2 border-boxed">Principais Conhecimentos e Tecnologias</h2>
                     <h3 class="h3">Nodejs</h3>
                     <div class="p">
                         <p>Baseado no interpretador V8, o NodeJS viabiliza a execução de código javascript no lado do servidor (beckend)</p>
                         <p>Umas das tecnologias que tenho mais utilizado nos últimos anos para projetos de estudo e soluções reais. Desde a criação de REST APIs &#8212; que frequentemente integro com ReactJS &#8212; quanto para monolitos geralmente acompanhados do simplista EJS.</p>
                     </div>
 
+                    <h3 class="h3">Bancos de Dados Relacionais</h3>
+                    <div class="p">
+                        <p>Proficiência em bancos de dados relacionais como MySQL e Postgresql. Tendo como capacidade, modelagem e criação de relacionamentos entre tabelas a fim de capacitar a persistência e organização de dados.</p>
+                        <p>Em conjunto, além do conhecimento da linguagem SQL, utilizo ORMs como Sequelize e Prisma, que ajudam a garantir mais segurança e praticidade na criação e versionamento da estrutura de banco de dados nos projetos.</p>
+                    </div>
+
                     <h3 class="h3">ReactJS</h3>
                     <div class="p">
                         <p>Uma biblioteca de javascript que permite criar interfaces de usuário para páginas web (frontend).</p>
-                        <p>O ReactJS viabiliza a criação de páginas SPAs (ou Single Page Applications) tendo assim, páginas mais rápidas e parecindas com aplicações pré-instaladas.</p>
-                        <p>A codificação se torna rápida organizada devido a suas características, uma delas é a componentização de elementos que podem ser reaproveitados em várias partes da página ou aplicação, além de unir html à interações javascript em arquivos únicos.</p>
+                        <p>O ReactJS viabiliza a criação de páginas SPAs (ou Single Page Applications) tendo assim, páginas mais rápidas e parecidas com APPs.</p>
+                        <p>A codificação se torna rápida organizada devido a suas características, sendo uma delas a componentização de elementos que podem ser reaproveitados em várias partes da página ou aplicação, além de unir html à interações javascript em arquivos únicos.</p>
                         <p>Utilizo-o sempre que possível, desde que atenda as necessidades do projeto em questão, assim entregando um software de maior qualidade em um tempo relativamente mais curto.</p>
                     </div>
                     <h3 class="h3">Typescript</h3>
@@ -98,21 +104,42 @@
                 </div>
             </div>
 
-            <div class="main-content main-content__conhecimentos" hidden>
+            <!-- <div class="main-content main-content__conhecimentos" hidden>
                 <div class="flex">
-                    <h2 class="border-boxed">Conhecimentos</h2>
+                    <h2 class="h2 border-boxed">Conhecimentos</h2>
+                    <h3 class="h3">Server Side</h3>
+                    <div class="p">
+                        <p></p>
+                    </div>
                 </div>
-            </div>
+            </div> -->
 
             <div class="main-content main-content__projetos" hidden>
                 <div class="flex">
-                    <h2 class="border-boxed">Projetos</h2>
+                    <h2 class="h2 border-boxed">Projetos</h2>
+                    <h3 class="h3">Mais projetos em breve...</h3>
                 </div>
             </div>
 
             <div class="main-content main-content__contato" hidden>
                 <div class="flex">
-                    <h2 class="border-boxed">Contato</h2>
+                    <h2 class="h2 border-boxed">Contato</h2>
+                    <ul>
+                        <li>Email: otiagosantos.code@gmail.com</li>
+                        <li><a href="https://www.linkedin.com/in/tiago-goncalves-dos-santos/" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://github.com/otiagosantos" target="_blank">Github</a></li>
+                    </ul>
+
+                    <form action="mailto:otiagosantos.code@gmail.com" method="post" enctype="text/plain">
+                        Name:<br>
+                        <input type="text" name="name"><br>
+                        E-mail:<br>
+                        <input type="text" name="mail"><br>
+                        Comment:<br>
+                        <input type="text" name="comment" size="50"><br><br>
+                        <input type="submit" value="Send">
+                        <input type="reset" value="Reset">
+                        </form>
                 </div>
             </div>
 
