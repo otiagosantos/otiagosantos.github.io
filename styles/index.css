@@ -10,6 +10,15 @@ body {
     /* background-color: #050505; */
 }
 
+ul li {
+    list-style: none;
+}
+
+a {
+    /* text-decoration: none; */
+    color: #fff;
+}
+
 .border-boxed {
     border: 3px solid #FFFFFF;
     padding: 10px;
